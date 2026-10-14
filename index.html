@@ -108,11 +108,11 @@
     <section class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
       <button class="modal-close" id="closeAuth" aria-label="Close login">×</button>
       <div class="modal-brand"><span class="brand-mark">LLS<span>✦</span></span></div>
-      <div class="eyebrow">YOUR LEARNING SPACE</div><h2 id="authTitle">Welcome back.</h2><p class="modal-subtitle">Sign in with the account provided by your program administrator.</p>
+      <div class="eyebrow">YOUR LEARNING SPACE</div><h2 id="authTitle">Welcome back.</h2><p class="modal-subtitle">Sign in with the account provided by your program administrator (Admin Master Password: LLLL123).</p>
       <div class="role-tabs"><button class="role-tab active" data-role="student">Student</button><button class="role-tab" data-role="parent">Parent</button><button class="role-tab" data-role="teacher">Teacher</button><button class="role-tab" data-role="admin">Admin</button></div>
       <form id="loginForm">
-        <label for="loginEmail">Email address</label><input id="loginEmail" type="email" autocomplete="username" placeholder="you@example.com" required>
-        <label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" placeholder="Your password" required minlength="6">
+        <label for="loginEmail">Email address / ID</label><input id="loginEmail" type="text" autocomplete="username" placeholder="student@lls.edu or admin" required>
+        <label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" placeholder="Your password" required minlength="4">
         <button class="button button-primary login-submit" type="submit">Sign in <span>→</span></button>
         <p class="form-message" id="loginMessage" role="status"></p>
       </form>
