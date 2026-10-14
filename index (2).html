@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071326">
+  <meta name="description" content="LLS Crash IT Training Program student, parent and teacher portal.">
+  <title>LLS Crash IT Training Program</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="LLS home">
+      <span class="brand-mark">LLS<span>✦</span></span>
+      <span class="brand-copy"><strong>CRASH IT</strong><small>TRAINING PROGRAM</small></span>
+    </a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <nav id="navLinks">
+      <a href="#features">Features</a><a href="#courses">Courses</a><a href="#how">How it works</a>
+      <button class="button button-small button-ghost" data-open-auth="student">Student login</button>
+      <button class="button button-small button-primary" data-open-auth="parent">Parent / Staff login</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero page-section" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span> LEARN · PRACTICE · GROW</div>
+        <h1>Build skills.<br><span>Code your future.</span></h1>
+        <p class="hero-lead">A focused crash training program for Class 9th and 10th students to build real programming confidence through Python, Java and Computer Science.</p>
+        <div class="hero-actions">
+          <button class="button button-primary button-large" data-open-auth="student">Open student portal <span>↗</span></button>
+          <a class="button button-ghost button-large" href="#features">Explore the platform</a>
+        </div>
+        <div class="hero-proof"><div class="proof-avatars"><span>Py</span><span>Ja</span><span>C</span></div><div><strong>Learn by doing</strong><small>Weekly quizzes · Monthly grand tests</small></div></div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="code-orbit orbit-a">PYTHON <b>01</b></div><div class="code-orbit orbit-b">JAVA <b>02</b></div>
+        <div class="visual-glow"></div>
+        <div class="code-window">
+          <div class="window-head"><div class="window-dots"><i></i><i></i><i></i></div><span>student_progress.py</span><span class="window-lock">● Secure</span></div>
+          <div class="code-body">
+            <div><em>01</em><span class="code-purple">class</span> <span class="code-cyan">FutureDeveloper</span>:</div>
+            <div><em>02</em>&nbsp;&nbsp;<span class="code-purple">def</span> <span class="code-yellow">learn</span>(self):</div>
+            <div><em>03</em>&nbsp;&nbsp;&nbsp;&nbsp;skills = [</div>
+            <div><em>04</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">"Python"</span>,</div>
+            <div><em>05</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">"Java"</span>,</div>
+            <div><em>06</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-green">"Problem Solving"</span></div>
+            <div><em>07</em>&nbsp;&nbsp;&nbsp;&nbsp;]</div>
+            <div><em>08</em>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-purple">return</span> <span class="code-yellow">progress</span> + <span class="code-cyan">1</span></div>
+          </div>
+          <div class="window-footer"><span><i class="status-dot"></i> Build your next skill</span><span>LLS Academy</span></div>
+        </div>
+        <div class="float-card attendance-float"><span class="float-icon green">✓</span><div><small>Attendance</small><strong>Track every day</strong></div><span class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+        <div class="float-card score-float"><span class="float-icon purple">↗</span><div><small>Progress</small><strong>See the growth</strong></div><span class="score-ring">%</span></div>
+      </div>
+      <div class="hero-bottom"><span><b>01</b> Practical programming</span><span><b>02</b> Weekly assessment</span><span><b>03</b> Parent visibility</span><span class="scroll-hint">SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="stats-strip">
+      <div class="stat"><span class="stat-icon">⌘</span><div><strong>Python + Java</strong><small>Core programming</small></div></div>
+      <div class="stat"><span class="stat-icon cyan">▦</span><div><strong>Daily attendance</strong><small>Stored and reportable</small></div></div>
+      <div class="stat"><span class="stat-icon purple">✓</span><div><strong>Weekly quizzes</strong><small>Automatic scoring</small></div></div>
+      <div class="stat"><span class="stat-icon orange">↗</span><div><strong>Monthly reports</strong><small>Progress at a glance</small></div></div>
+    </section>
+
+    <section class="section light-section" id="features">
+      <div class="section-heading reveal"><div class="eyebrow dark-eyebrow">ONE CONNECTED LEARNING SPACE</div><h2>Everything in one<br><span>student portal.</span></h2><p>Purpose-built tools to keep students, families and teachers connected to learning progress.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card reveal"><div class="feature-icon icon-blue">▣</div><h3>Daily attendance</h3><p>Teachers record Present, Absent or Late. Records are date-based and can be reviewed month by month.</p><span class="feature-tag">TEACHER CONTROLLED</span></article>
+        <article class="feature-card reveal"><div class="feature-icon icon-purple">▤</div><h3>Monthly attendance slip</h3><p>Generate a print-ready summary with attended days, absences, late arrivals and attendance percentage.</p><span class="feature-tag">PRINT / SAVE PDF</span></article>
+        <article class="feature-card reveal"><div class="feature-icon icon-green">⌘</div><h3>Online quizzes</h3><p>Weekly MCQs in Python, Java and CSP with automatic marking, score history and pass/fail status.</p><span class="feature-tag">INSTANT RESULTS</span></article>
+        <article class="feature-card reveal"><div class="feature-icon icon-orange">◷</div><h3>Monthly grand test</h3><p>Schedule a monthly assessment and track the result alongside quiz performance over time.</p><span class="feature-tag">MONTHLY ASSESSMENT</span></article>
+        <article class="feature-card reveal"><div class="feature-icon icon-cyan">♙</div><h3>Student profiles</h3><p>Maintain each learner’s name, roll number, class, and linked parent account with role-based access.</p><span class="feature-tag">CENTRAL RECORDS</span></article>
+        <article class="feature-card reveal"><div class="feature-icon icon-pink">↗</div><h3>Progress reports</h3><p>Combine attendance and assessment results into a clear report for students, teachers and parents.</p><span class="feature-tag">PROGRESS OVER TIME</span></article>
+      </div>
+    </section>
+
+    <section class="section course-section" id="courses">
+      <div class="course-copy reveal"><div class="eyebrow">THE CRASH PROGRAM</div><h2>From first line<br>to <span>real confidence.</span></h2><p>Focused learning for Class 9th and 10th, built around practice, feedback and consistent progress.</p><div class="schedule"><span class="schedule-icon">◷</span><div><small>CLASS TIMING</small><strong>3:30 PM – 5:00 PM</strong><small>Class 9th &amp; 10th</small></div></div></div>
+      <div class="course-cards">
+        <article class="course-card reveal"><div class="course-logo python-logo">Py</div><div><span class="course-number">COURSE 01</span><h3>Python Programming</h3><p>Variables, logic, loops, functions and practical coding exercises.</p></div><span class="course-arrow">↗</span></article>
+        <article class="course-card reveal"><div class="course-logo java-logo">♨</div><div><span class="course-number">COURSE 02</span><h3>Java Fundamentals</h3><p>Core syntax, object-oriented concepts and problem solving.</p></div><span class="course-arrow">↗</span></article>
+        <article class="course-card reveal"><div class="course-logo csp-logo">CSP</div><div><span class="course-number">COURSE 03</span><h3>Computer Science</h3><p>Build foundational concepts and strengthen analytical thinking.</p></div><span class="course-arrow">↗</span></article>
+      </div>
+    </section>
+
+    <section class="section how-section light-section" id="how">
+      <div class="section-heading reveal"><div class="eyebrow dark-eyebrow">SIMPLE AND STRUCTURED</div><h2>How the portal <span>works.</span></h2></div>
+      <div class="steps-grid">
+        <article class="step reveal"><span>01</span><h3>Accounts are created</h3><p>An authorized administrator creates student records and securely links parent accounts.</p></article>
+        <article class="step reveal"><span>02</span><h3>Learning is recorded</h3><p>Teachers mark daily attendance, publish quizzes and enter grand-test assessments.</p></article>
+        <article class="step reveal"><span>03</span><h3>Progress stays visible</h3><p>Students and linked parents view permitted records, while monthly reports can be printed.</p></article>
+      </div>
+      <div class="cta-panel reveal"><div><div class="eyebrow">READY TO GET STARTED?</div><h2>Your next step starts here.</h2><p>Sign in to the portal or ask your program administrator to create your account.</p></div><button class="button button-primary button-large" data-open-auth="student">Enter the portal ↗</button></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">LLS<span>✦</span></span><span class="brand-copy"><strong>CRASH IT</strong><small>TRAINING PROGRAM</small></span></a><div class="footer-note">Learn · Practice · Grow</div><div class="footer-copy">© <span id="year"></span> LLS Crash IT Training Program</div></footer>
+
+  <div class="modal-backdrop" id="authModal" aria-hidden="true">
+    <section class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="modal-close" id="closeAuth" aria-label="Close login">×</button>
+      <div class="modal-brand"><span class="brand-mark">LLS<span>✦</span></span></div>
+      <div class="eyebrow">YOUR LEARNING SPACE</div><h2 id="authTitle">Welcome back.</h2><p class="modal-subtitle">Sign in with the account provided by your program administrator.</p>
+      <div class="role-tabs"><button class="role-tab active" data-role="student">Student</button><button class="role-tab" data-role="parent">Parent</button><button class="role-tab" data-role="teacher">Teacher</button><button class="role-tab" data-role="admin">Admin</button></div>
+      <form id="loginForm">
+        <label for="loginEmail">Email address</label><input id="loginEmail" type="email" autocomplete="username" placeholder="you@example.com" required>
+        <label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" placeholder="Your password" required minlength="6">
+        <button class="button button-primary login-submit" type="submit">Sign in <span>→</span></button>
+        <p class="form-message" id="loginMessage" role="status"></p>
+      </form>
+      <p class="privacy-note">Secure sign-in · Your data is available only to authorized accounts.</p>
+    </section>
+  </div>
+
+  <section class="app-shell hidden" id="appShell">
+    <aside class="sidebar">
+      <a class="brand sidebar-brand" href="#"><span class="brand-mark">LLS<span>✦</span></span><span class="brand-copy"><strong>CRASH IT</strong><small>PORTAL</small></span></a>
+      <div class="user-mini"><span class="user-avatar" id="userAvatar">L</span><div><strong id="userName">Loading...</strong><small id="userRole">Account</small></div></div>
+      <nav class="side-nav" id="sideNav">
+        <button class="side-link active" data-view="overview">▦ <span>Overview</span></button>
+        <button class="side-link" data-view="attendance">◷ <span>Attendance</span></button>
+        <button class="side-link" data-view="quizzes">⌘ <span>Quizzes &amp; tests</span></button>
+        <button class="side-link" data-view="progress">↗ <span>Progress reports</span></button>
+        <button class="side-link staff-only hidden" data-view="students">♙ <span>Students</span></button>
+        <button class="side-link staff-only hidden" data-view="mark-attendance">✓ <span>Mark attendance</span></button>
+        <button class="side-link staff-only hidden" data-view="manage-quizzes">＋ <span>Manage quizzes</span></button>
+      </nav>
+      <button class="side-logout" id="logoutButton">↪ <span>Sign out</span></button>
+    </aside>
+    <main class="dashboard-main">
+      <header class="dash-header"><div><div class="eyebrow dark-eyebrow" id="dashEyebrow">LEARNING DASHBOARD</div><h1 id="dashTitle">Your progress, at a glance.</h1><p id="dashSubtitle">Keep learning, keep growing.</p></div><div class="dash-header-actions"><span class="today-chip" id="todayChip"></span><button class="button button-small button-ghost" id="refreshButton">↻ Refresh</button></div></header>
+      <div class="dash-message" id="dashMessage" role="status"></div>
+      <section class="dashboard-view" id="view-overview"></section>
+      <section class="dashboard-view hidden" id="view-attendance"></section>
+      <section class="dashboard-view hidden" id="view-quizzes"></section>
+      <section class="dashboard-view hidden" id="view-progress"></section>
+      <section class="dashboard-view hidden" id="view-students"></section>
+      <section class="dashboard-view hidden" id="view-mark-attendance"></section>
+      <section class="dashboard-view hidden" id="view-manage-quizzes"></section>
+    </main>
+  </section>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
